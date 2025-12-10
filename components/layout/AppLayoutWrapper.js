@@ -3,6 +3,7 @@
 import Header from "@/components/layout/Header"
 import PhoneTabBar from "@/components/layout/phone/PhoneTabBar";
 import useWindowDimensions from '@/hooks/useWindowDimensions';
+import HorizontalMenu from '@/components/layout/horizontal-menu/HorizontalMenu';
 
 
 export default function AppLayoutWrapper({ children }) {
@@ -14,6 +15,8 @@ export default function AppLayoutWrapper({ children }) {
     return (
         <>
             <Header />
+
+            <HorizontalMenu />
 
             {children}
 
