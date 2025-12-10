@@ -1,0 +1,189 @@
+/* Computer and Phones */
+.inputWithIcon {
+    width: 85%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noTransition {
+    transition: none !important;
+}
+
+:root {
+    --regular-card-width: calc(var(--regular-item-width) + var(--card-lateral-padding) * 2);
+}
+
+/* Computer and Phones border and background styles */
+
+.medGreyBorder {
+    background-color: transparent;
+    border: 2px solid var(--strong-grey);
+}
+
+.brightRedBg {
+    background-color: var(--bright-red);
+    border: none;
+}
+
+.darkGreyBg {
+    background-color: var(--dark-grey);
+    border: none;
+}
+
+
+
+/* Computer */
+@media (min-width: 1100px) and (orientation: portrait),
+(min-height: 600px) and (orientation: landscape) {
+
+    /* Main sizes of the components */
+    :root {
+        --header-height: 6.5vw;
+        --page-padding-top: 2.5vw;
+        --page-padding-bottom: 4vw;
+        --regular-border-radius: 0.8vw;
+        --regular-item-width: 25vw;
+        --regular-item-height: 3vw;
+        --large-item-width: 35vw;
+        --large-item-height: 3.6vw;
+        --very-large-item-width: 71.5vw;
+        --item-margin-top: 1.1vw;
+        --card-lateral-padding: 2vw;
+    }
+
+
+    /* Components style */
+    .pageBody {
+        background-color: var(--light-grey);
+        width: 100vw;
+        height: calc(100dvh - var(--header-height));
+        top: var(--header-height);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--page-padding-top);
+        padding-bottom: var(--page-padding-bottom);
+        overflow-y: scroll;
+    }
+
+    .card {
+        padding: 3vw var(--card-lateral-padding);
+        border-radius: var(--regular-border-radius);
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .regularItem {
+        width: var(--regular-item-width);
+        min-height: var(--regular-item-height);
+        height: var(--regular-item-height);
+        border-radius: var(--regular-border-radius);
+        margin-top: var(--item-margin-top);
+        padding: 0 1vw;
+    }
+
+    .largeItem {
+        width: var(--large-item-width);
+        min-height: var(--large-item-height);
+        height: var(--large-item-height);
+        border-radius: var(--regular-border-radius);
+        padding: 0 1vw;
+        margin-top: var(--item-margin-top);
+    }
+
+    .passwordIcon {
+        color: var(--light-grey);
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+
+    .line {
+        background-color: var(--bright-grey);
+        min-height: 0.1vw;
+    }
+
+    .computerLargeItemWidth {
+        width: var(--large-item-width);
+    }
+
+}
+
+
+/* Phones */
+@media (max-width: 1100px) and (orientation: portrait),
+(max-height: 600px) and (orientation: landscape) {
+
+    /* Main sizes of the components */
+    :root {
+        --header-height: calc(var(--screen-coeff) * 80px);
+        --page-padding-top: calc(var(--screen-coeff) * 30px);
+        --page-padding-bottom: calc(var(--screen-coeff) * 50px);
+        --regular-border-radius: calc(var(--screen-coeff) * 10px);
+        --regular-item-width: calc(var(--screen-coeff) * 280px);
+        --regular-item-height: calc(var(--screen-coeff) * 40px);
+        --large-item-width: calc(var(--screen-coeff) * 380px);
+        --large-item-height: calc(var(--screen-coeff) * 50px);
+        --item-margin-top: calc(var(--screen-coeff) * 15px);
+        --card-lateral-padding: calc(var(--screen-coeff) * 20px);
+    }
+
+    /* Components style */
+    .pageBody {
+        background-color: var(--light-grey);
+        width: 100vw;
+        min-height: calc(100dvh - var(--header-height));
+        top: var(--header-height);
+        padding-bottom: var(--page-padding-bottom);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--page-padding-top);
+        position: relative;
+    }
+
+    .card {
+        padding: calc(var(--screen-coeff) * 30px) var(--card-lateral-padding) calc(var(--screen-coeff) * 20px);
+        border-radius: var(--regular-border-radius);
+        margin-top: calc(var(--screen-coeff) * 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .regularItem {
+        width: var(--regular-item-width);
+        min-height: var(--regular-item-height);
+        height: var(--regular-item-height);
+        border-radius: var(--regular-border-radius);
+        margin-top: var(--item-margin-top);
+        padding: 0 calc(var(--screen-coeff) * 10px);
+    }
+
+    .largeItem {
+        width: var(--large-item-width);
+        max-width: 100%;
+        min-height: var(--large-item-height);
+        height: var(--large-item-height);
+        border-radius: var(--regular-border-radius);
+        padding: 0 calc(var(--screen-coeff) * 10px);
+        margin-top: var(--item-margin-top);
+    }
+
+    .passwordIcon {
+        color: var(--light-grey);
+        width: calc(var(--screen-coeff) * 20px);
+        height: calc(var(--screen-coeff) * 20px);
+    }
+
+    .line {
+        background-color: var(--bright-grey);
+        min-height: 1px
+    }
+
+}

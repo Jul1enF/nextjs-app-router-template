@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Roboto, Inter } from "next/font/google";
+import '@/styles/globals.css';
+import '@/styles/fonts.css'
+import '@/styles/colors.css'
+import '@/styles/components.css'
+import '@/styles/screenCoeff.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import AppLayoutWrapper from "@/components/layout/AppLayoutWrapper";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
-});
+})
+
+const roboto = Roboto({
+  subsets: ["latin"],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -18,9 +22,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="fr">
+      <body className={`${inter.variable} ${roboto.className}`}>
+        <AppLayoutWrapper >
+          {children}
+        </AppLayoutWrapper>
       </body>
     </html>
   );
