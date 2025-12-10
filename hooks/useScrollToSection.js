@@ -30,9 +30,9 @@ const getParentsStatus = (element, horizontal) => {
     // If the section container is horizontal, we need a scroll parent to not go over the edges so we let it null
 
     // Add potentials heights of fixed header
-    const fixedHeaders = document.querySelectorAll("[fixed-header]");
+    const fixedHeaders = document.querySelectorAll('[data-fixed-header="true"]');
 
-    if (fixedHeaders.length && containerToScroll === window) {
+    if (fixedHeaders?.length && containerToScroll === window) {
         fixedHeaders.forEach(e => fixedElementsHeight += e.clientHeight)
     }
 

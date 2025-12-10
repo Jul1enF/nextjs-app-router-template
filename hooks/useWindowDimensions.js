@@ -2,42 +2,46 @@ import { useState, useEffect } from "react";
 
 export default function useWindowDimensions() {
 
+    // State to not render the dom while it hasn't been hydrated
+    const [mounted, setMounted] = useState(false)
+
     // State to know if the app is display on a computer or a smaller screen
-    const [computerDisplay, setComputerDisplay] = useState(false)
+    const [computerDisplay, setComputerDisplay] = useState(null)
 
     // States to register in real time vw and vh
     const [vw, setVw] = useState(1)
     const [vh, setVh] = useState(1)
 
     // States to register the free height available in the layout and the fixed headers height
-    const [freeHeight, setFreeHeight]=useState(100)
-    const [headersHeight, setHeadersHeight]=useState(0)
+    const [freeHeight, setFreeHeight] = useState(100)
+    const [headersHeight, setHeadersHeight] = useState(0)
 
     useEffect(() => {
 
         const handleResize = () => {
-	        setVw(window.innerWidth / 100);
-	        setVh(window.innerHeight / 100)
-        
-            if (window.innerHeight >= 600 && window.innerWidth / window.innerHeight > 1 || window.innerWidth >= 1100 && window.innerWidth / window.innerHeight < 1) {
-                setComputerDisplay(true)
-            } else {
-                setComputerDisplay(false)
-            }
+            const w = window.innerWidth;
+            const h = window.innerHeight;
 
-            const fixedHeaders = document.querySelectorAll("[fixed-header]");
+            setVw(w / 100);
+            setVh(h / 100);
+
+            setComputerDisplay((h >= 600 && w / h > 1) || (w >= 1100 && w / h < 1));
+
+            const fixedHeaders = document.querySelectorAll('[data-fixed-header="true"]')
+
             let fixedHeadersHeight = 0
-            if (fixedHeaders.length) fixedHeaders.forEach(e => fixedHeadersHeight += e.clientHeight)
+            fixedHeaders.forEach(e => fixedHeadersHeight += e?.clientHeight)
             setHeadersHeight(fixedHeadersHeight)
 
-            const fixedFooters = document.querySelectorAll("[fixed-footer]");
-            let fixedFootersHeight = 0
-            if (fixedFooters.length) fixedFooters.forEach(e => fixedFootersHeight += e.clientHeight)
+            const fixedFooters = document.querySelectorAll('[data-fixed-footer="true"]');
             
+            let fixedFootersHeight = 0
+            fixedFooters.forEach(e => fixedFootersHeight += e?.clientHeight)
             setFreeHeight(window.innerHeight - fixedHeadersHeight - fixedFootersHeight)
         };
 
         handleResize()
+        setMounted(true);
 
         window.addEventListener("resize", handleResize);
         return () => {
@@ -45,5 +49,5 @@ export default function useWindowDimensions() {
         };
     }, []);
 
-    return { computerDisplay, vw, vh, freeHeight, headersHeight }
+    return {mounted ,computerDisplay, vw, vh, freeHeight, headersHeight }
 }

@@ -6,7 +6,10 @@ import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 
 export default function AppLayoutWrapper({ children }) {
-    const { computerDisplay } = useWindowDimensions()
+    const {mounted, computerDisplay } = useWindowDimensions()
+   
+    // Don't render if the dom hasn't been hydrated and computerDisplay setted
+    if (!mounted) return null
 
     return (
         <>
