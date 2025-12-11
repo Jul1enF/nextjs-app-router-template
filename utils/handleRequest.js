@@ -1,4 +1,6 @@
-export default async function request({path, method = "GET", body, params, jwtToken, ref, setWarning, setModalVisible, setUploading}) {
+'use client'
+
+export default async function handleRequest({path, method = "GET", body, params, jwtToken, ref, setWarning, setModalVisible, setUploading}, request) {
 
     const warning = typeof setWarning === "function" ? true : false
     const modal = typeof setModalVisible === "function" ? true : false
@@ -37,8 +39,7 @@ export default async function request({path, method = "GET", body, params, jwtTo
             ? "/" + (Array.isArray(params) ? params.join("/") : params)
             : "";
 
-        const response = await fetch(`${url}/${path}${urlParams}`, options);
-        const data = await response.json()
+        const data = await request(url, path, urlParams, options)
 
         if (data.error) {
             displayWarning(data.error)
@@ -49,8 +50,8 @@ export default async function request({path, method = "GET", body, params, jwtTo
             return data
         }
     }
-    catch (fetchError) {
-        console.log(`${path.toUpperCase()} FETCH ERROR :`, fetchError)
+    catch (err) {
+        console.log(`${path.toUpperCase()} FETCH HANDLE ERROR :`, err)
         displayWarning()
     }
     finally {

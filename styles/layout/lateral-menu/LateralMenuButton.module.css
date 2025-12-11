@@ -1,7 +1,7 @@
 .menuButton {
     width: 8vw;
     height: 3vw;
-    background-color: var(--medium-grey);
+    background-color: var(--medium-grey3);
     border: transparent;
     position: absolute;
     left: 4vw;
