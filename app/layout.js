@@ -5,7 +5,8 @@ import '@/styles/colors.css'
 import '@/styles/components.css'
 import '@/styles/screenCoeff.css'
 
-import AppLayoutWrapper from "@/components/layout/AppLayoutWrapper";
+import ClientProviderWrapper from "@/components/layout-wrapper/ClientProviderWrapper";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,9 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={`${inter.variable} ${roboto.className}`}>
-        <AppLayoutWrapper >
+        <ClientProviderWrapper >
           {children}
-        </AppLayoutWrapper>
+        </ClientProviderWrapper>
       </body>
     </html>
   );

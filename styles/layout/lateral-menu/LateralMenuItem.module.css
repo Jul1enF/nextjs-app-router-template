@@ -25,7 +25,7 @@
 
   .mainContainer:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    color : color-mix(in srgb, var(--bright-grey) 85%, transparent);
+    /* color : color-mix(in srgb, var(--bright-grey) 85%, transparent); */
   }
 }
 
