@@ -22,13 +22,13 @@ export default function ConfirmationModal({ visible, confirmationText, warning, 
 
                     <div className={`line ${styles.thisLine}`} />
 
-                    <p className={`warning ${warning.success ? "success" : "error"}`} style={!warning.text ? { height: 0, marginTop: 0 } : {}}>
-                        {warning.text}
-                    </p>
+                    <button type="button" className="regularItem strongRedBg regularText" onClick={closeModal}>{cancelButtonText}</button>
 
                     <button type="button" className="regularItem strongRedBg regularText" onClick={confirmationFunction}>{confirmationButtonText}</button>
 
-                    <button type="button" className="regularItem strongRedBg regularText" onClick={closeModal}>{cancelButtonText}</button>
+                    <p className={`warning ${warning?.success ? "success" : "error"}`} style={!warning?.text ? { height: 0, marginTop: 0 } : {}}>
+                        {warning?.text}
+                    </p>
 
                 </div>
 
