@@ -46,7 +46,7 @@ export default async function handleRequest({path, method = "GET", body, params,
         } else if (!data.result) {
             displayWarning()
         } else {
-            data.successMsg && displayWarning(data.successMsg)
+            data.successMsg && displayWarning(data.successMsg, true)
             return data
         }
     }
