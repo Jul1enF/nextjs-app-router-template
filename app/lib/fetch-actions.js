@@ -3,7 +3,7 @@
 
 export async function request (url, path, urlParams, options){
     try {
-        const response = await fetch(`${url}/${path}${urlParams}`, options);
+        const response = await fetch(`${url}${path}${urlParams}`, options);
         return await response.json()
 
     }catch(err){

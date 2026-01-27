@@ -5,7 +5,7 @@ const getParentsStatus = (element, horizontal) => {
     let containerToScroll = null
     let fixedElementsHeight = 0
 
-    while (parent) {
+    while (parent && !containerToScroll) {
         const style = window.getComputedStyle(parent);
 
         if (!containerToScroll) {
@@ -32,6 +32,7 @@ const getParentsStatus = (element, horizontal) => {
     // Add potentials heights of fixed header
     const fixedHeaders = document.querySelectorAll('[data-fixed-header="true"]');
 
+    // Only take the height of the fixed headers if we are scrolling inside window (at the root, where they are) and not inside a component
     if (fixedHeaders?.length && containerToScroll === window) {
         fixedHeaders.forEach(e => fixedElementsHeight += e.clientHeight)
     }
@@ -60,24 +61,35 @@ export default function useScrollToSection(selectedSectionName, horizontal, sect
         const scrollDirection = horizontal ? "left" : "top"
         const scrollOffset = horizontal ? "scrollLeft" : "scrollTop"
 
-        const sectionRectOffset = targetedSection.getBoundingClientRect()[scrollDirection]
-        let containerRectOffset = 0
-        let containerScroll = window.scrollY
+        let containerViewportOffset
+        let containerCurrentScroll
 
-        if (containerToScroll !== window) {
-            containerRectOffset = containerToScroll.getBoundingClientRect()[scrollDirection]
-            containerScroll = containerToScroll[scrollOffset]
+        // Setting vars to scroll directly inside window
+        if (containerToScroll === window) {
+            containerViewportOffset = 0
+            containerCurrentScroll = window.scrollY
         }
-        const offset = sectionRectOffset - containerRectOffset + containerScroll - padding - fixedElementsHeight;
+        // Setting vars to scroll inside a component
+        else {
+            containerViewportOffset = containerToScroll.getBoundingClientRect()[scrollDirection]
+            containerCurrentScroll = containerToScroll[scrollOffset]
+        }
 
+        const sectionViewportOffset = targetedSection.getBoundingClientRect()[scrollDirection]
+
+        const distanceToScroll = sectionViewportOffset - containerViewportOffset + containerCurrentScroll - padding - fixedElementsHeight;
+
+        // Scroll inside window
         if (containerToScroll === window) {
             window.scroll({
-                [scrollDirection]: offset,
+                [scrollDirection]: distanceToScroll,
                 behavior: "smooth",
             })
-        } else {
+        }
+        // Scroll inside component
+        else {
             containerToScroll.scrollTo({
-                [scrollDirection]: offset,
+                [scrollDirection]: distanceToScroll,
                 behavior: "smooth",
             });
         }

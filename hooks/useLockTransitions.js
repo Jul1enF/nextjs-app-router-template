@@ -7,7 +7,7 @@ export default function useLockTransitions(refs) {
         : typeof refs === "object" && refs !== null ? Object.values(refs)
         : [refs];
 
-    const nodesArray = array.map(e => e?.current ? e.current : e)
+    const nodesArray = array.map(e => e?.current ?? e)
 
     useEffect(() => {
         const freezeTransitions = () => {
