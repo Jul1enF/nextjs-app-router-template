@@ -3,7 +3,7 @@ import '@/styles/global/globals.css';
 import '@/styles/global/fonts.css'
 import '@/styles/global/colors.css'
 import '@/styles/global/components.css'
-import '@/styles/global/screenCoeff.css'
+import '@/styles/global/scaledPx.css'
 
 import ClientProviderWrapper from "@/components/layout-wrapper/ClientProviderWrapper";
 

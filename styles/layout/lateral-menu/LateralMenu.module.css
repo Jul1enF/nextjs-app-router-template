@@ -25,7 +25,7 @@
 @media (max-width: 1100px) and (orientation: portrait),
 (max-height: 600px) and (orientation: landscape) {
     .mainContainer {
-        --menu-width: calc(var(--screen-coeff) * 330px);
+        --menu-width: calc(330 * var(--scaled-px));
         width: var(--menu-width);
         background-color: var(--medium-grey3);
         position: absolute;

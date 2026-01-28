@@ -37,10 +37,10 @@
 (max-height: 600px) and (orientation: landscape) {
     .menuIcon {
         color: var(--dark-white);
-        height: calc(var(--screen-coeff) * 32px);
-        width: calc(var(--screen-coeff) * 32px);
+        height: calc(32 * var(--scaled-px));
+        width: calc(32 * var(--scaled-px));
         position: absolute;
-        left: calc(var(--screen-coeff) * 25px);
-        margin-top: calc(var(--screen-coeff) * 3px);
+        left: calc(25 * var(--scaled-px));
+        margin-top: calc(3 * var(--scaled-px));
     }
 }

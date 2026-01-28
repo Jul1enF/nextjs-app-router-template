@@ -9,26 +9,26 @@
 
     .icon {
         color: var(--light-grey);
-        width: calc(var(--screen-coeff) * 27px);
-        height: calc(var(--screen-coeff) * 27px);
+        width: calc(27 * var(--scaled-px));
+        height: calc(27 * var(--scaled-px));
     }
 
     .selectedIcon {
         color: var(--dark-white);
-        width: calc(var(--screen-coeff) * 27px);
-        height: calc(var(--screen-coeff) * 27px);
+        width: calc(27 * var(--scaled-px));
+        height: calc(27 * var(--scaled-px));
     }
 
     .pageName {
         color: var(--light-grey);
-        font-size: calc(var(--screen-coeff) * 18px);
+        font-size: calc(18 * var(--scaled-px));
         font-weight: 600;
-        margin: calc(var(--screen-coeff) * 5px) 0 0 0;
+        margin: calc(5 * var(--scaled-px)) 0 0 0;
     }
 
     .selectedPageName {
         color: var(--dark-white);
-        font-size: calc(var(--screen-coeff) * 18px);
+        font-size: calc(18 * var(--scaled-px));
         font-weight: 600;
-        margin: calc(var(--screen-coeff) * 5px) 0 0 0;
+        margin: calc(5 * var(--scaled-px)) 0 0 0;
     }

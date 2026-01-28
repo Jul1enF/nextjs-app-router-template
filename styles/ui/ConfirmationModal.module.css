@@ -84,8 +84,8 @@
 
     .visibleModal {
         position: absolute;
-        padding-top: calc(var(--screen-coeff) * 35px);
-        padding-bottom: calc(var(--screen-coeff) * 35px);
+        padding-top: calc(35 * var(--scaled-px));
+        padding-bottom: calc(35 * var(--scaled-px));
         bottom: 20lvh;
         width: var(--regular-card-width);
         visibility: visible;
@@ -97,8 +97,8 @@
     .hiddenModal {
         position: absolute;
         visibility: hidden;
-        padding-top: calc(var(--screen-coeff) * 35px);
-        padding-bottom: calc(var(--screen-coeff) * 35px);
+        padding-top: calc(35 * var(--scaled-px));
+        padding-bottom: calc(35 * var(--scaled-px));
         bottom: -50lvh;
         width: var(--regular-card-width);
         transition: bottom 0.3s,
@@ -112,12 +112,12 @@
         color: var(--bright-grey);
         text-align: center;
         margin: 0;
-        font-size: calc(var(--screen-coeff) * 20px);
+        font-size: calc(20 * var(--scaled-px));
     }
 
 
     .thisLine {
         width: calc(var(--regular-item-width) * 0.4);
-        margin: calc(var(--screen-coeff) * 20px) 0;
+        margin: calc(20 * var(--scaled-px)) 0;
     }
 }

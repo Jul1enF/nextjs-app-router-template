@@ -1,21 +1,21 @@
-/* Tablets  */
+/* Tablets (only for portrait, in landscape mode, tablets will display the desktop version with vw as unit of measure */
 @media (max-width: 1100px) and (min-width: 600px) and (orientation: portrait) {
     :root {
-        --screen-coeff: 1.5;
+        --scaled-px: 1.5px;
     }
 }
 
 /* Regular phones  */
 @media (max-width: 600px) and (min-width: 390px) and (orientation: portrait) {
     :root {
-        --screen-coeff: 1;
+        --scaled-px: 1px;
     }
 }
 
 /* Small phones */
 @media (max-width: 390px) and (orientation: portrait) {
     :root {
-        --screen-coeff: 0.85;
+        --scaled-px: 0.85px;
     }
 }
 
@@ -23,6 +23,6 @@
 /* Devices in landscape */
 @media (max-height: 600px) and (orientation: landscape){
      :root {
-        --screen-coeff: 1;
+        --scaled-px: 1px;
     }
 }

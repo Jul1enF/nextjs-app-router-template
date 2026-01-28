@@ -44,8 +44,8 @@
 .headerTitle {
     color: var(--dark-white);
     margin: 0;
-    font-size: calc(var(--screen-coeff) * 36px);
-    letter-spacing: calc(var(--screen-coeff) * 2px);
+    font-size: calc(36 * var(--scaled-px));
+    letter-spacing: calc(2 * var(--scaled-px));
     font-weight: 600;
     text-align: center;
     cursor: pointer;
