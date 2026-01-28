@@ -7,20 +7,28 @@ import HorizontalMenu from '@/components/layout/horizontal-menu/HorizontalMenu';
 
 
 export default function AppLayoutWrapper({ children }) {
-    const {mounted, computerDisplay } = useWindowDimensions()
-   
+    const { mounted, computerDisplay } = useWindowDimensions()
+
     // Don't render if the dom hasn't been hydrated and computerDisplay setted
     if (!mounted) return null
 
     return (
         <>
-            <Header />
+            <header>
+                <Header />
 
-            <HorizontalMenu />
+                <HorizontalMenu />
+            </header>
 
-            {children}
+            <main>
+                {children}
+            </main>
 
-            {!computerDisplay && <PhoneTabBar />}
+            {!computerDisplay && (
+                <nav aria-label="Navigation principale mobile">
+                    <PhoneTabBar />
+                </nav>
+            )}
         </>
     )
 

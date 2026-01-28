@@ -15,7 +15,7 @@
 /* Small phones */
 @media (max-width: 390px) and (orientation: portrait) {
     :root {
-        --screen-coeff: 0.9;
+        --screen-coeff: 0.85;
     }
 }
 

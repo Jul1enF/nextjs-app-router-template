@@ -1,4 +1,55 @@
-/* Computer and Phones */
+/* ============================================================
+   BASE VARIABLES - COMPUTER / PHONES / TABLETS
+   ============================================================ */
+
+:root {
+    --regular-card-width: calc(var(--regular-item-width) + var(--card-horizontal-padding) * 2);
+    --headers-height: calc(var(--header-height) + var(--horiz-menu-height, 0px));
+}
+
+
+/* ============================================================
+   BASE UTILITY CLASSES - COMPUTER / PHONES / TABLETS
+   ============================================================ */
+.pageContent {
+    background-color: var(--light-grey);
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100dvh;
+    padding-top: calc(var(--headers-height) + var(--large-margin-top));
+    padding-bottom: var(--page-padding-bottom);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regularItem {
+    width: var(--regular-item-width);
+    min-height: var(--regular-item-height);
+    height: var(--regular-item-height);
+    border-radius: var(--regular-border-radius);
+    margin-top: var(--regular-margin-top);
+    padding: 0 var(--regular-horizontal-padding);
+}
+
+.largeItem {
+    width: var(--large-item-width);
+    min-height: var(--large-item-height);
+    height: var(--large-item-height);
+    border-radius: var(--regular-border-radius);
+    padding: 0 var(--regular-horizontal-padding);
+    margin-top: var(--regular-margin-top);
+}
+
+.largeCardItem {
+    width: 100%;
+    min-height: var(--large-item-height);
+    height: var(--large-item-height);
+    border-radius: var(--regular-border-radius);
+    margin-top: var(--regular-margin-top);
+    padding: 0 var(--regular-horizontal-padding);
+}
+
 .inputWithIcon {
     width: 85%;
     height: 100%;
@@ -8,18 +59,37 @@
     margin: 0;
 }
 
+.card {
+    padding: var(--card-padding);
+    border-radius: var(--regular-border-radius);
+    margin-top: var(--medium-margin-top);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-grey);
+}
+
+.largeCard {
+    padding: var(--card-padding);
+    width : var(--large-card-width);
+    border-radius: var(--regular-border-radius);
+    margin-top: var(--medium-margin-top);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-grey);
+}
+
 .noTransition {
     transition: none !important;
 }
 
-:root {
-    --regular-card-width: calc(var(--regular-item-width) + var(--card-lateral-padding) * 2);
-    --headers-height: calc(var(--header-height) + var(--horiz-menu-height));
-}
 
-/* Computer and Phones border and background styles */
+/* ============================================================
+   BORDER & BACKGROUND STYLES - COMPUTER / PHONES / TABLETS
+   ============================================================ */
 
-.medGreyBorder {
+.strongGreyBorder {
     background-color: transparent;
     border: 2px solid var(--strong-grey);
 }
@@ -36,7 +106,10 @@
 
 
 
-/* Computer */
+/* ============================================================
+   RESPONSIVE VARIABLES AND CLASSES - COMPUTER
+   ============================================================ */
+
 @media (min-width: 1100px) and (orientation: portrait),
 (min-height: 600px) and (orientation: landscape) {
 
@@ -44,62 +117,45 @@
     :root {
         --header-height: 6.5vw;
         --horiz-menu-height: 3vw;
-        --page-padding-top: 2.5vw;
+
         --page-padding-bottom: 4vw;
+
         --regular-border-radius: 0.8vw;
+        --regular-horizontal-padding: 1vw;
         --regular-item-width: 25vw;
         --regular-item-height: 3vw;
+
         --large-item-width: 35vw;
         --large-item-height: 3.6vw;
-        --very-large-item-width: 71.5vw;
-        --item-margin-top: 1.1vw;
-        --card-lateral-padding: 2vw;
+
+
+        --regular-margin-top: 1.2vw;
+        --medium-margin-top: 2vw;
+        /* page padding top : */
+        --large-margin-top: 2.5vw;
+        --very-large-margin-top: 3.8vw;
+
+        --large-card-width : 40vw;
+        --card-horizontal-padding: 2vw;
+        --card-padding: 3vw var(--card-horizontal-padding);
     }
 
 
-    /* Components style */
-    .pageBody {
-        background-color: var(--light-grey);
-        width: 100vw;
-        height: calc(100dvh - var(--headers-height));
-        top: var(--headers-height);
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: var(--page-padding-top);
-        padding-bottom: var(--page-padding-bottom);
-        overflow-y: scroll;
+    /* Components classes */
+    .pageViewport {
+        max-height: 100dvh;
+        overflow-y: auto;
     }
 
-    .card {
-        padding: 3vw var(--card-lateral-padding);
-        border-radius: var(--regular-border-radius);
-        margin-top: 2vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .mediumItemHeight {
+        height: 3.3vw;
     }
 
-    .regularItem {
-        width: var(--regular-item-width);
-        min-height: var(--regular-item-height);
-        height: var(--regular-item-height);
-        border-radius: var(--regular-border-radius);
-        margin-top: var(--item-margin-top);
-        padding: 0 1vw;
-    }
-
-    .largeItem {
+    .desktopLargeItemWidth {
         width: var(--large-item-width);
-        min-height: var(--large-item-height);
-        height: var(--large-item-height);
-        border-radius: var(--regular-border-radius);
-        padding: 0 1vw;
-        margin-top: var(--item-margin-top);
     }
 
-    .passwordIcon {
+    .smallIcon {
         color: var(--light-grey);
         width: 1.6vw;
         height: 1.6vw;
@@ -110,14 +166,13 @@
         min-height: 0.1vw;
     }
 
-    .computerLargeItemWidth {
-        width: var(--large-item-width);
-    }
-
 }
 
 
-/* Phones */
+
+/* ============================================================
+   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS
+   ============================================================ */
 @media (max-width: 1100px) and (orientation: portrait),
 (max-height: 600px) and (orientation: landscape) {
 
@@ -126,60 +181,38 @@
         --header-height: calc(var(--screen-coeff) * 80px);
         --horiz-menu-height: calc(var(--screen-coeff) * 45px);
         --tab-bar-height: calc(var(--screen-coeff) * 86px);
-        --page-padding-top: calc(var(--screen-coeff) * 30px);
+
         --page-padding-bottom: calc(var(--tab-bar-height) + calc(var(--screen-coeff) * 50px));
+
         --regular-border-radius: calc(var(--screen-coeff) * 10px);
+        --regular-horizontal-padding: calc(var(--screen-coeff) * 10px);
         --regular-item-width: calc(var(--screen-coeff) * 280px);
         --regular-item-height: calc(var(--screen-coeff) * 40px);
+
+
         --large-item-width: calc(var(--screen-coeff) * 380px);
         --large-item-height: calc(var(--screen-coeff) * 50px);
-        --item-margin-top: calc(var(--screen-coeff) * 15px);
-        --card-lateral-padding: calc(var(--screen-coeff) * 20px);
+
+
+        --regular-margin-top: calc(var(--screen-coeff) * 15px);
+        --medium-margin-top: calc(var(--screen-coeff) * 25px);
+        /* page padding top : */
+        --large-margin-top: calc(var(--screen-coeff) * 30px);
+        --very-large-margin-top: calc(var(--screen-coeff) * 45px);
+
+
+        --large-card-width : var(--large-item-width);
+        --card-horizontal-padding: calc(var(--screen-coeff) * 20px);
+        --card-padding: calc(var(--screen-coeff) * 30px) var(--card-horizontal-padding) calc(var(--screen-coeff) * 20px);
     }
 
-    /* Components style */
-    .pageBody {
-        background-color: var(--light-grey);
-        width: 100vw;
-        min-height: calc(100dvh - var(--headers-height));
-        top: var(--headers-height);
-        padding-bottom: var(--page-padding-bottom);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: var(--page-padding-top);
-        position: relative;
+    /* Components classes */
+
+    .mediumItemHeight {
+        height: calc(var(--screen-coeff) * 45px);
     }
 
-    .card {
-        padding: calc(var(--screen-coeff) * 30px) var(--card-lateral-padding) calc(var(--screen-coeff) * 20px);
-        border-radius: var(--regular-border-radius);
-        margin-top: calc(var(--screen-coeff) * 20px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .regularItem {
-        width: var(--regular-item-width);
-        min-height: var(--regular-item-height);
-        height: var(--regular-item-height);
-        border-radius: var(--regular-border-radius);
-        margin-top: var(--item-margin-top);
-        padding: 0 calc(var(--screen-coeff) * 10px);
-    }
-
-    .largeItem {
-        width: var(--large-item-width);
-        max-width: 100%;
-        min-height: var(--large-item-height);
-        height: var(--large-item-height);
-        border-radius: var(--regular-border-radius);
-        padding: 0 calc(var(--screen-coeff) * 10px);
-        margin-top: var(--item-margin-top);
-    }
-
-    .passwordIcon {
+    .samllIcon {
         color: var(--light-grey);
         width: calc(var(--screen-coeff) * 20px);
         height: calc(var(--screen-coeff) * 20px);
