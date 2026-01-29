@@ -26,7 +26,7 @@
       }
 
       .pageSubtitle {
-          color: var(--very-bright-grey);
+          color: var(--dark-white);
           margin: 0;
           font-size: 1.5vw;
           letter-spacing: 0.15vw;
@@ -100,7 +100,7 @@
       }
 
       .pageSubtitle {
-          color: var(--very-bright-grey);
+          color: var(--dark-white);
           margin: 0;
           font-size: calc(22 * var(--scaled-px));
           letter-spacing: calc(2 * var(--scaled-px));

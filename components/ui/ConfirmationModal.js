@@ -21,7 +21,7 @@ export default function ConfirmationModal({ visible, confirmationText, warning, 
     return (
         <>
             <div className={visible ? styles.activeOverlay : styles.disabledOverlay} onClick={closeModal} ref={overlayRef} >
-                <div className={`card darkGreyBg ${visible ? styles.visibleModal : styles.hiddenModal}`} onClick={(e) => e.stopPropagation()} ref={modalRef} >
+                <div className={`largeCard ${visible ? styles.visibleModal : styles.hiddenModal}`} onClick={(e) => e.stopPropagation()} ref={modalRef} >
 
                     <h3 className="regularText" style={{textAlign : "center"}}>
                         {confirmationText}

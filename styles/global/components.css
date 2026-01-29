@@ -71,7 +71,7 @@
 }
 
 .largeCard {
-    padding: var(--card-padding);
+    padding: var(--large-card-padding);
     width: var(--large-card-width);
     border-radius: var(--regular-border-radius);
     margin-top: var(--large-margin-top);
@@ -157,9 +157,11 @@
         --large-margin-top: 2.5vw;
         --very-large-margin-top: 3.8vw;
 
-        --large-card-width: 40vw;
         --card-horizontal-padding: 2vw;
         --card-padding: 3vw var(--card-horizontal-padding);
+
+        --large-card-width: 40vw;
+        --large-card-padding : 3vw var(--card-horizontal-padding) 4vw;
     }
 
 
@@ -221,9 +223,11 @@
         --very-large-margin-top: calc(45 * var(--scaled-px));
 
 
-        --large-card-width: var(--large-item-width);
         --card-horizontal-padding: calc(20 * var(--scaled-px));
-        --card-padding: calc(30 * var(--scaled-px)) var(--card-horizontal-padding) calc(20 * var(--scaled-px));
+        --card-padding: calc(30 * var(--scaled-px)) var(--card-horizontal-padding) calc(35 * var(--scaled-px));
+
+        --large-card-width: var(--large-item-width);
+        --large-card-padding: calc(30 * var(--scaled-px)) var(--card-horizontal-padding) calc(45 * var(--scaled-px));
     }
 
     /* Components classes */
