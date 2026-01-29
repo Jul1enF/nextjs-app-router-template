@@ -1,5 +1,5 @@
 /* ============================================================
-   BASE VARIABLES - COMPUTER / PHONES / TABLETS
+   BASE VARIABLES - ALL SCREENS
    ============================================================ */
 
 :root {
@@ -9,7 +9,7 @@
 
 
 /* ============================================================
-   BASE UTILITY CLASSES - COMPUTER / PHONES / TABLETS
+   BASE UTILITY CLASSES - ALL SCREENS
    ============================================================ */
 
 .pageContent {
@@ -87,7 +87,7 @@
 
 
 /* ============================================================
-   MARGIN UTILITY CLASSES - COMPUTER / PHONES / TABLETS
+   MARGIN UTILITY CLASSES - ALL SCREENS
    ============================================================ */
 
 .mt-regular {
@@ -109,7 +109,7 @@
 
 
 /* ============================================================
-   BORDER & BACKGROUND STYLES - COMPUTER / PHONES / TABLETS
+   BORDER & BACKGROUND STYLES - ALL SCREENS
    ============================================================ */
 
 .strongGreyBorder {
@@ -130,11 +130,10 @@
 
 
 /* ============================================================
-   RESPONSIVE VARIABLES AND CLASSES - COMPUTER
+   RESPONSIVE VARIABLES AND CLASSES - DESKTOP LANDSCAPE
    ============================================================ */
 
-@media (min-width: 1100px) and (orientation: portrait),
-(min-height: 600px) and (orientation: landscape) {
+@media (min-width: 1350px) and (orientation: landscape) {
 
     /* Main sizes of the components */
     :root {
@@ -192,18 +191,15 @@
 }
 
 
+/* ===============================================================================
+   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS / SMALL SCREENS / PORTRAIT
+   =============================================================================== */
 
-/* ============================================================
-   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS
-   ============================================================ */
-
-@media (max-width: 1100px) and (orientation: portrait),
-(max-height: 600px) and (orientation: landscape) {
+@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
 
     /* Main sizes of the components */
     :root {
         --header-height: calc(80 * var(--scaled-px));
-        --horiz-menu-height: calc(45 * var(--scaled-px));
         --tab-bar-height: calc(86 * var(--scaled-px));
 
         --page-padding-bottom: calc(var(--tab-bar-height) + calc(50 * var(--scaled-px)));
@@ -247,4 +243,17 @@
         min-height: 1px
     }
 
+}
+
+
+/* =========================================================================================
+   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS / SMALL SCREENS : LANDSCAPE OVERRIDE
+   ========================================================================================= */
+
+@media (max-width: 1350px) and (orientation: landscape) {
+    :root {
+        --horiz-menu-height: calc(45 * var(--scaled-px));
+        /* Large card width override */
+        --large-card-width: calc(525 * var(--scaled-px));
+    }
 }

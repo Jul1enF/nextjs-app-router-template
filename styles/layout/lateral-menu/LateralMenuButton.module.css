@@ -1,30 +1,19 @@
-.menuButton {
-    width: 8vw;
-    height: 3vw;
-    background-color: var(--medium-grey3);
-    border: transparent;
-    position: absolute;
-    left: 4vw;
-    border-radius: calc(var(--regular-border-radius) * 0.8);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
+/* Desktop : Landscape */
+@media (min-width: 1350px) and (orientation: landscape) {
+    .menuButton {
+        width: 8vw;
+        height: 3vw;
+        background-color: var(--medium-grey3);
+        border: transparent;
+        position: absolute;
+        left: 4vw;
+        border-radius: calc(var(--regular-border-radius) * 0.8);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-.menuText {
-    color: var(--dark-white);
-    font-size: 1.3vw;
-    letter-spacing: 0.05vw;
-    font-weight: 500;
-    line-height: 1.4em;
-    text-align: center;
-    margin: 0;
-}
-
-/* Computer */
-@media (min-width: 1100px) and (orientation: portrait),
-(min-height: 600px) and (orientation: landscape) {
     .menuIcon {
         color: var(--dark-white);
         height: 1.6vw;
@@ -32,9 +21,33 @@
     }
 }
 
-/* Phones */
-@media (max-width: 1100px) and (orientation: portrait),
-(max-height: 600px) and (orientation: landscape) {
+/* Phones / Tablets / Small Screens in landscape */
+@media (max-width: 1350px) and (orientation: landscape) {
+    .menuButton {
+        width: calc(105 * var(--scaled-px));
+        height: calc(38 * var(--scaled-px));
+        background-color: var(--medium-grey3);
+        border: transparent;
+        position: absolute;
+        left: 4vw;
+        border-radius: calc(var(--regular-border-radius) * 0.8);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .menuIcon {
+        color: var(--dark-white);
+        height: calc(26 * var(--scaled-px));
+        width: calc(26 * var(--scaled-px));
+    }
+}
+
+
+/* Portrait mode */
+@media (orientation : portrait) {
+
     .menuIcon {
         color: var(--dark-white);
         height: calc(32 * var(--scaled-px));

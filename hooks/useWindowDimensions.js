@@ -5,8 +5,8 @@ export default function useWindowDimensions() {
     // State to not render the dom while it hasn't been hydrated
     const [mounted, setMounted] = useState(false)
 
-    // State to know if the app is display on a computer or a smaller screen
-    const [computerDisplay, setComputerDisplay] = useState(null)
+    // States to know if the app is displayed in landscape or on a phone
+    const [landscapeDisplay, setLandscapeDisplay] = useState(null)
 
     // States to register in real time vw and vh
     const [vw, setVw] = useState(1)
@@ -25,7 +25,8 @@ export default function useWindowDimensions() {
             setVw(w / 100);
             setVh(h / 100);
 
-            setComputerDisplay((h >= 600 && w / h > 1) || (w >= 1100 && w / h < 1));
+            setLandscapeDisplay(w / h > 1);
+            
 
             const fixedHeaders = document.querySelectorAll('[data-fixed-header="true"]')
 
@@ -49,5 +50,5 @@ export default function useWindowDimensions() {
         };
     }, []);
 
-    return {mounted ,computerDisplay, vw, vh, freeHeight, headersHeight }
+    return {mounted ,landscapeDisplay, vw, vh, freeHeight, headersHeight }
 }

@@ -7,9 +7,9 @@ import HorizontalMenu from '@/components/layout/horizontal-menu/HorizontalMenu';
 
 
 export default function AppLayoutWrapper({ children }) {
-    const { mounted, computerDisplay } = useWindowDimensions()
+    const { mounted, landscapeDisplay } = useWindowDimensions()
 
-    // Don't render if the dom hasn't been hydrated and computerDisplay setted
+    // Don't render if the dom hasn't been hydrated and landscapeDisplay setted
     if (!mounted) return null
 
     return (
@@ -17,14 +17,14 @@ export default function AppLayoutWrapper({ children }) {
             <header>
                 <Header />
 
-                <HorizontalMenu />
+                {landscapeDisplay && <HorizontalMenu />}
             </header>
 
             <main>
                 {children}
             </main>
 
-            {!computerDisplay && (
+            {!landscapeDisplay && (
                 <nav aria-label="Navigation principale mobile">
                     <PhoneTabBar />
                 </nav>

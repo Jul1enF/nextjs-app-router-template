@@ -5,9 +5,9 @@ import { IoMenu } from "react-icons/io5";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function LateralMenuButton({ toggleVisibility }) {
-  const { computerDisplay } = useWindowDimensions();
+  const { landscapeDisplay } = useWindowDimensions();
 
-  if (computerDisplay) {
+  if (landscapeDisplay) {
     return (
       <button
         type="button"
@@ -16,7 +16,7 @@ export default function LateralMenuButton({ toggleVisibility }) {
         id="lateralMenuButtonId"
       >
         <IoMenu className={styles.menuIcon} />
-        <p className={styles.menuText}>Menu</p>
+        <p className="largeText">Menu</p>
       </button>
     );
   } else {

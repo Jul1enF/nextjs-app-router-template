@@ -1,28 +1,30 @@
-/* Tablets (only for portrait, in landscape mode, tablets will display the desktop version with vw as unit of measure */
-@media (max-width: 1100px) and (min-width: 600px) and (orientation: portrait) {
+/* Scaled pixel is used for screens too small to have fonts and measures in vw (13" laptops, tablets, phones) and when in portrait mode */
+
+
+/* Tablets - Small Screens */
+@media (max-width: 1350px) and (min-width: 500px) and (min-height: 500px) {
     :root {
-        --scaled-px: 1.5px;
+        --scaled-px: 1.05px;
     }
 }
 
-/* Regular phones  */
-@media (max-width: 600px) and (min-width: 390px) and (orientation: portrait) {
+/* Regular phones - Portait */
+@media (max-width: 500px) and (min-width: 390px) and (orientation: portrait){
     :root {
         --scaled-px: 1px;
     }
 }
 
-/* Small phones */
+/* Small phones - Portrait */
 @media (max-width: 390px) and (orientation: portrait) {
     :root {
         --scaled-px: 0.85px;
     }
 }
 
-
-/* Devices in landscape */
-@media (max-height: 600px) and (orientation: landscape){
-     :root {
-        --scaled-px: 1px;
+/* Phones in landscape */
+@media (max-height: 500px) and (orientation: landscape){
+    :root {
+        --scaled-px: 0.95px;
     }
 }

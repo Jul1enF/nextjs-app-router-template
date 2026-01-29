@@ -7,7 +7,7 @@ import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 export default function Home() {
   const [modalVisible, setModalVisible] = useState(false)
-const {vw } = useWindowDimensions()
+const {vw, vh } = useWindowDimensions()
   return (
     <div className="pageContent pageViewport">
       <h2 className="pageTitle">
@@ -15,7 +15,7 @@ const {vw } = useWindowDimensions()
       </h2>
 
       <h3 className="pageSubtitle">
-        Hello, are you there ?! {vw * 1.2}
+        Hello, are you there ?! largeur écran : {(vw * 100).toFixed(2)} hauteur écran : {(vh * 100).toFixed(2)}
       </h3>
 
       <button className='regularItem strongRedBg regularText' onClick={() => setModalVisible(true)}>

@@ -31,9 +31,8 @@
 
 
 
-/* Computer */
-@media (min-width: 1100px) and (orientation: portrait),
-(min-height: 600px) and (orientation: landscape) {
+/* Desktop : Landscape */
+@media (min-width: 1350px) and (orientation: landscape) {
 
     .visibleModal {
         position: absolute;
@@ -78,9 +77,8 @@
 
 
 
-/* Phones */
-@media (max-width: 1100px) and (orientation: portrait),
-(max-height: 600px) and (orientation: landscape) {
+/* Portrait + Phones - Tablets - Small Screens : Landscape */
+@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
 
     .visibleModal {
         position: absolute;
