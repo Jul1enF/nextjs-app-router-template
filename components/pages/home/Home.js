@@ -37,6 +37,10 @@ const {vw, vh } = useWindowDimensions()
 
       <ConfirmationModal visible={modalVisible} confirmationText={"Êtes vous sûr de vouloir gagner 1 million d'euros ?"} confirmationButtonText={"Oui je suis sûr"} cancelButtonText={"Non je préfère un chocolat"} confirmationFunction={() => setModalVisible(false)} closeModal={() => setModalVisible(false)} />
 
+        <p className='regularText mt-large'>
+          Un nouveau record pour cette carte, que l’Américain avait achetée 5,3 millions de dollars en 2021, soit trois fois moins. Lancées le 6 janvier, les enchères ont longtemps plafonné autour de 5,1 millions de dollars avant de s’envoler les dernières heures. L’identité de l’acheteur n’est, pour l’heure, pas connue, mais l’influenceur a d’ores et déjà promis de lui remettre en main propre.
+        </p>
+
 
 
       <div className='largeCard'>
