@@ -6,167 +6,89 @@
       color: var(--light-green)
   }
 
+  /* Main fonts settings of the app */
 
-
-  /* Desktop : Landscape */
-  @media (min-width: 1350px) and (orientation: landscape) {
-
-      /* Main fonts settings of the app */
-      :root {
-          --regular-font-size: 1.23vw;
-      }
-
-      .pageTitle {
-          color: var(--dark-white);
-          margin: 0;
-          font-size: 2.2vw;
-          letter-spacing: 0.066em;
-          font-weight: 500;
-      }
-
-      .pageSubtitle {
-          color: var(--dark-white);
-          margin: 0;
-          font-size: 1.6vw;
-          letter-spacing: 0.09em;
-          font-weight: 400;
-          line-height: 1.4em;
-      }
-
-      .labelText {
-          color: var(--dark-white);
-          font-size: 1.3vw;
-          font-weight: 600;
-          letter-spacing: 0.1vw;
-          margin: 0;
-      }
-
-      .largeText {
-          color: var(--dark-white);
-          font-size: 1.3vw;
-          font-weight: 400;
-          letter-spacing: 0.08vw;
-          margin: 0;
-      }
-
-      .regularText {
-          color: var(--dark-white);
-          font-size: var(--regular-font-size);
-          font-weight: 400;
-          letter-spacing: 0.05vw;
-          margin: 0;
-          line-height: 1.4em;
-      }
-
-      .smallText {
-          color: var(--dark-white);
-          font-size: 1vw;
-          font-weight: 400;
-          letter-spacing: 0.05vw;
-          line-height: 1em;
-          margin: 0;
-      }
-
-      .warning {
-          font-weight: 500;
-          width: 100%;
-          font-size: 1.2vw;
-          letter-spacing: 0.05vw;
-          margin: var(--regular-margin-top) 0 0 0;
-          line-height: 1em;
-      }
+  :root {
+      --regular-font-size: 1.125rem;
   }
 
+  .pageTitle {
+      color: var(--dark-white);
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.066em;
+      font-weight: 500;
+  }
 
-  /* Portrait + Phones - Tablets - Small Screens : Landscape */
-  @media (max-width: 1350px) and (orientation: landscape),
-  (orientation : portrait) {
+  .pageTitlePx {
+      font-size: calc(30 * var(--scaled-px));
+  }
 
-      /* Main fonts settings of the app */
+  .pageSubtitle {
+      color: var(--dark-white);
+      margin: 0;
+      font-size: 1.45rem;
+      letter-spacing: 0.07em;
+      font-weight: 400;
+  }
 
-      :root {
-          --regular-font-size: 1.125rem;
-      }
+  .pageSubtitlePx {
+      font-size: calc(22 * var(--scaled-px));
+  }
 
-      .pageTitle {
-          color: var(--dark-white);
-          margin: 0;
-          font-size: 1.875rem;
-          letter-spacing: 0.066em;
-          font-weight: 500;
-      }
+  .labelText {
+      color: var(--dark-white);
+      font-size: 1.22rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      margin: 0;
+  }
 
-      .pageTitlePx {
-          font-size: calc(30 * var(--scaled-px));
-      }
+  .labelTextPx {
+      font-size: calc(19.5 * var(--scaled-px));
+  }
 
-      .pageSubtitle {
-          color: var(--dark-white);
-          margin: 0;
-          font-size: 1.375rem;
-          letter-spacing: 0.09em;
-          font-weight: 400;
-      }
+  .largeText {
+      color: var(--dark-white);
+      font-size: 1.22rem;
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      margin: 0;
+  }
 
-      .pageSubtitlePx {
-          font-size: calc(22 * var(--scaled-px));
-      }
+  .largeTextPx {
+      font-size: calc(19 * var(--scaled-px));
+  }
 
-      .labelText {
-          color: var(--dark-white);
-          font-size: 1.22rem;
-          font-weight: 600;
-          letter-spacing: 0.09em;
-          margin: 0;
-      }
+  .regularText {
+      color: var(--dark-white);
+      font-size: var(--regular-font-size);
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: 0.055em;
+      line-height: 1.3em;
+  }
 
-      .labelTextPx {
-          font-size: calc(19.5 * var(--scaled-px));
-      }
+  .regularTextPx {
+      font-size: calc(18 * var(--scaled-px));
+  }
 
-      .largeText {
-          color: var(--dark-white);
-          font-size: 1.19rem;
-          font-weight: 400;
-          letter-spacing: 0.07em;
-          margin: 0;
-      }
+  .smallText {
+      color: var(--dark-white);
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1em;
+  }
 
-      .largeTextPx {
-          font-size: calc(19 * var(--scaled-px));
-      }
+  .smallTextPx {
+      font-size: calc(16 * var(--scaled-px));
+  }
 
-      .regularText {
-          color: var(--dark-white);
-          font-size: var(--regular-font-size);
-          font-weight: 400;
-          margin: 0;
-          letter-spacing: 0.055em;
-          line-height: 1.3em;
-      }
-
-      .regularTextPx {
-          font-size: calc(18 * var(--scaled-px));
-      }
-
-      .smallText {
-          color: var(--dark-white);
-          font-size: 1rem;
-          font-weight: 400;
-          margin: 0;
-          line-height: 1em;
-      }
-
-      .smallTextPx {
-          font-size: calc(16 * var(--scaled-px));
-      }
-
-      .warning {
-          font-weight: 500;
-          width: 100%;
-          font-size: var(--regular-font-size);
-          margin: var(--regular-margin-top) 0 0 0;
-          line-height: 1.05em;
-      }
-
+  .warning {
+      font-weight: 500;
+      width: 100%;
+      font-size: var(--regular-font-size);
+      margin: var(--regular-margin-top) 0 0 0;
+      line-height: 1.05em;
   }

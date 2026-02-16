@@ -2,7 +2,7 @@
 
 @media (min-width: 1350px) and (orientation: landscape) {
     html {
-        font-size: 100%;
+        font-size: 1.06vw;
     }
 }
 
@@ -39,7 +39,7 @@
     }
 
      html {
-        font-size: 85%;
+        font-size: 90%;
     }
 }
 
