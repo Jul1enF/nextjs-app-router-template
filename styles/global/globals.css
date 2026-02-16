@@ -1,7 +1,12 @@
+html {
+    font-size: 100%;
+  }
+
 body {
   padding: 0;
   margin: 0;
   max-width: 100%;
+  text-align: center;
 
   /* Color of the background to fill empty edges spaces on safari ios. Must use the color of the tabBar and Headeer */
   background: var(--strong-black);
@@ -14,8 +19,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
-
 
 /* Changes of default settings */
 input {

@@ -22,6 +22,10 @@ const {vw, vh } = useWindowDimensions()
         Confirmation
       </button>
 
+      <button className='mediumItem strongRedBg regularText mt-medium' onClick={() => setModalVisible(true)}>
+        Confirmation - medium height
+      </button>
+
       <button className='largeItem strongRedBg regularText mt-medium' onClick={() => setModalVisible(true)}>
         Confirmation - regular text
       </button>

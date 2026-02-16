@@ -26,33 +26,43 @@
 
 .regularItem {
     width: var(--regular-item-width);
-    min-height: var(--regular-item-height);
-    height: var(--regular-item-height);
+    max-width: 100%;
     border-radius: var(--regular-border-radius);
+    min-height: var(--regular-item-height);
     margin-top: var(--regular-margin-top);
-    padding: 0 var(--regular-horizontal-padding);
+    padding: var(--regular-vertical-padding) var(--regular-horizontal-padding);
+}
+
+.mediumItem {
+    width: var(--medium-item-width);
+    max-width: 100%;
+    min-height: var(--medium-item-height);
+    border-radius: var(--regular-border-radius);
+    padding: var(--medium-vertical-padding) var(--regular-horizontal-padding);
+    margin-top: var(--regular-margin-top);
 }
 
 .largeItem {
     width: var(--large-item-width);
+    max-width: 100%;
     min-height: var(--large-item-height);
-    height: var(--large-item-height);
     border-radius: var(--regular-border-radius);
-    padding: 0 var(--regular-horizontal-padding);
+    padding: var(--large-vertical-padding) var(--regular-horizontal-padding);
     margin-top: var(--regular-margin-top);
 }
 
 .largeCardItem {
     width: 100%;
+    max-width: 100%;
     min-height: var(--large-item-height);
-    height: var(--large-item-height);
     border-radius: var(--regular-border-radius);
     margin-top: var(--regular-margin-top);
-    padding: 0 var(--regular-horizontal-padding);
+    padding: var(--large-vertical-padding) var(--regular-horizontal-padding);
 }
 
 .inputWithIcon {
     width: 85%;
+    max-width: 85%;
     height: 100%;
     background-color: transparent;
     border: none;
@@ -61,6 +71,7 @@
 }
 
 .card {
+    max-width: 100%;
     padding: var(--card-padding);
     border-radius: var(--regular-border-radius);
     margin-top: var(--medium-margin-top);
@@ -73,6 +84,7 @@
 .largeCard {
     padding: var(--large-card-padding);
     width: var(--large-card-width);
+    max-width: 100%;
     border-radius: var(--regular-border-radius);
     margin-top: var(--large-margin-top);
     display: flex;
@@ -144,9 +156,15 @@
 
         --regular-border-radius: 0.8vw;
         --regular-horizontal-padding: 1vw;
+        --regular-vertical-padding : 0.65vw;
         --regular-item-width: 25vw;
         --regular-item-height: 3vw;
 
+        --medium-vertical-padding : 0.80vw;
+        --medium-item-width: 31vw;
+        --medium-item-height: 3.3vw;
+
+        --large-vertical-padding : 0.95vw;
         --large-item-width: 35vw;
         --large-item-height: 3.6vw;
 
@@ -169,10 +187,6 @@
     .pageViewport {
         max-height: 100dvh;
         overflow-y: auto;
-    }
-
-    .mediumItemHeight {
-        height: 3.3vw;
     }
 
     .desktopLargeItemWidth {
@@ -208,10 +222,17 @@
 
         --regular-border-radius: calc(10 * var(--scaled-px));
         --regular-horizontal-padding: calc(10 * var(--scaled-px));
+        --regular-vertical-padding : calc(8 * var(--scaled-px));
         --regular-item-width: calc(280 * var(--scaled-px));
         --regular-item-height: calc(40 * var(--scaled-px));
 
 
+        --medium-vertical-padding : calc(11 * var(--scaled-px));
+        --medium-item-width: calc(340 * var(--scaled-px));
+        --medium-item-height: calc(45 * var(--scaled-px));
+
+
+        --large-vertical-padding : calc(13.5 * var(--scaled-px));
         --large-item-width: calc(380 * var(--scaled-px));
         --large-item-height: calc(50 * var(--scaled-px));
 
@@ -232,9 +253,6 @@
 
     /* Components classes */
 
-    .mediumItemHeight {
-        height: calc(45 * var(--scaled-px));
-    }
 
     .smallIcon {
         color: var(--light-grey);

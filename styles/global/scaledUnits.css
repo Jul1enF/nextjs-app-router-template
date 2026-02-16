@@ -8,10 +8,18 @@
     }
 }
 
+/* 18px */
+/* @media (min-width: 1400px) {
+  html {
+    font-size: 112.5%;
+  }
+} */
+
 /* Regular phones - Portait */
-@media (max-width: 500px) and (min-width: 390px) and (orientation: portrait){
+@media (max-width: 500px) and (min-width: 391px) and (orientation: portrait) {
     :root {
         --scaled-px: 1px;
+        --font-reg: 1.125rem;
     }
 }
 
@@ -23,7 +31,7 @@
 }
 
 /* Phones in landscape */
-@media (max-height: 500px) and (orientation: landscape){
+@media (max-height: 500px) and (orientation: landscape) {
     :root {
         --scaled-px: 0.95px;
     }

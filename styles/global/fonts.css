@@ -22,7 +22,6 @@
           font-size: 2.5vw;
           letter-spacing: 0.15vw;
           font-weight: 500;
-          text-align: center;
       }
 
       .pageSubtitle {
@@ -32,7 +31,6 @@
           letter-spacing: 0.15vw;
           font-weight: 400;
           line-height: 1.4em;
-          text-align: center;
       }
 
       .labelText {
@@ -70,7 +68,6 @@
       }
 
       .warning {
-          text-align: center;
           font-weight: 500;
           width: 100%;
           font-size: 1.2vw;
@@ -96,7 +93,6 @@
           font-size: calc(30 * var(--scaled-px));
           letter-spacing: calc(2 * var(--scaled-px));
           font-weight: 500;
-          text-align: center;
       }
 
       .pageSubtitle {
@@ -105,7 +101,6 @@
           font-size: calc(22 * var(--scaled-px));
           letter-spacing: calc(2 * var(--scaled-px));
           font-weight: 400;
-          text-align: center;
       }
 
       .labelText {
@@ -122,6 +117,10 @@
           font-weight: 400;
           letter-spacing: calc(1.3 * var(--scaled-px));
           margin: 0;
+      }
+
+      .largeTextPx {
+        font-size: calc(19 * var(--scaled-px));
       }
 
       .regularText {
@@ -142,7 +141,6 @@
       }
 
       .warning {
-          text-align: center;
           font-weight: 500;
           width: 100%;
           font-size: calc(18 * var(--scaled-px));
