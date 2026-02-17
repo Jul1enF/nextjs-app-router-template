@@ -2,7 +2,7 @@
 
 @media (min-width: 1350px) and (orientation: landscape) {
     html {
-        font-size: 1.06vw;
+        font-size: clamp(16.8px, 1.06vw, 24px);
     }
 }
 
