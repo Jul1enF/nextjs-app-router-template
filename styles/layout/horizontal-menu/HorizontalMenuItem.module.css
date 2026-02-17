@@ -1,28 +1,15 @@
-/* Desktop : Landscapes */
-@media (min-width: 1600px) and (orientation: landscape)  {
-
-    .linkItem {
-        background-color: transparent;
-        border: none;
-        position: relative;
-        height: 100%;
-        border-bottom: solid 0.38vw transparent;
-    }
-
-    .unselectedLinkItem:hover {
-        color: var(--bright-grey);
-        border-bottom: solid 0.38vw color-mix(in srgb, var(--strong-red) 60%, transparent);
-    }
+.linkItem {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    border-bottom: solid calc(6 * var(--ui-unit)) transparent;
+    margin-top: calc(6 * var(--ui-unit));
 }
 
-/* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
-
-    .linkItem {
-        background-color: transparent;
-        border: none;
-        height: 100%;
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
+.unselectedLinkItem:hover {
+    color: var(--bright-grey);
+    border-bottom: solid calc(6 * var(--ui-unit)) color-mix(in srgb, var(--strong-red) 60%, transparent);
 }

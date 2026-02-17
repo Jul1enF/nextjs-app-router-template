@@ -59,13 +59,14 @@ export default function HorizontalMenu() {
         } else return false
     }
 
+
     const updateSelectedSection = () => {
         // Search of a section in the array matching the current pathname
         const sectionFound = sectionsArray.find(e => urlMatchSection(e))
 
         // If a section has been found, setting of selectedSection to it
-        if (!urlMatchSection(sectionFound) && currentSection) {
-            setSelectedSection(currentSection)
+        if (!urlMatchSection(selectedSection) && sectionFound) {
+            setSelectedSection(sectionFound)
         }
         // Else setting of selectedSection to null
         else if (!urlMatchSection(selectedSection)) {

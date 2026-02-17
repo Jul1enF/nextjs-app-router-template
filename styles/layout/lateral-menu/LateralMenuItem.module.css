@@ -1,42 +1,10 @@
-/* Desktop : Landscape */
-@media (min-width: 1600px) and (orientation: landscape) {
-  .mainContainer {
-    width: 100%;
-    height: 6vw;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid var(--light-grey);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--bright-grey);
-    font-size: 1.4vw;
-    letter-spacing: 0.1vw;
-    font-weight: 500;
-    line-height: 1.4em;
-    text-align: center;
-    margin: 0;
-    background-color: transparent;
-  }
 
-  .mainContainer:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    /* color : color-mix(in srgb, var(--bright-grey) 85%, transparent); */
-  }
-}
-
-/* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait)  {
   .mainContainer {
     width: 100%;
     height: calc(90 * var(--ui-unit));
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     border-bottom: 1px solid var(--light-grey);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,4 +19,7 @@
     background-color: transparent;
     ;
   }
-}
+
+  .mainContainer:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }

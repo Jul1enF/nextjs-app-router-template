@@ -1,31 +1,9 @@
-/* Desktop : Landscape */
-@media (min-width: 1600px) and (orientation: landscape) {
-    .menuButton {
-        width: 8vw;
-        height: 3vw;
-        background-color: var(--medium-grey3);
-        border: transparent;
-        position: absolute;
-        left: 4vw;
-        border-radius: calc(var(--regular-border-radius) * 0.8);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
 
-    .menuIcon {
-        color: var(--dark-white);
-        height: 1.6vw;
-        width: 1.6vw;
-    }
-}
-
-/* Phones / Tablets / Small Screens in landscape */
-@media (max-width: 1600px) and (orientation: landscape) {
+/* Landscape mode */
+@media (orientation: landscape) {
     .menuButton {
-        width: calc(105 * var(--ui-unit));
-        height: calc(38 * var(--ui-unit));
+        width: calc(110 * var(--ui-unit));
+        height: calc(42 * var(--ui-unit));
         background-color: var(--medium-grey3);
         border: transparent;
         position: absolute;

@@ -1,11 +1,11 @@
-/* Desktop : Landscape */
-@media (min-width: 1600px) and (orientation: landscape){
+/* Landscape */
+@media (orientation: landscape){
 
 }
 
 
-/* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
+/* Portrait */
+@media (orientation : portrait) {
 
 
 }

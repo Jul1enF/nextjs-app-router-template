@@ -29,58 +29,7 @@
     justify-content: center;
 }
 
-
-
-/* Desktop : Landscape */
-@media (min-width: 1600px) and (orientation: landscape) {
-
-    .visibleModal {
-        position: absolute;
-        padding-top: 3vw;
-        padding-bottom: 3vw;
-        bottom: 20lvh;
-        width: var(--regular-card-width);
-        visibility: visible;
-        transition: bottom 0.35s ease-in-out;
-        z-index: 12;
-    }
-
-
-    .hiddenModal {
-        position: absolute;
-        visibility: hidden;
-        padding-top: 3vw;
-        padding-bottom: 3vw;
-        bottom: -50lvh;
-        width: var(--regular-card-width);
-        transition: bottom 0.3s,
-            visibility 0s 0.3s;
-        z-index: 12;
-        overflow: hidden;
-    }
-
-    .confirmationText {
-        font-weight: 500;
-        color: var(--bright-grey);
-        text-align: center;
-        margin: 0;
-        font-size: 1.2vw;
-        line-height: 1.4em;
-    }
-
-
-    .thisLine {
-        width: calc(var(--regular-item-width) * 0.4);
-        margin: 2vw 0;
-    }
-}
-
-
-
-/* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
-
-    .visibleModal {
+.visibleModal {
         position: absolute;
         padding-top: calc(35 * var(--ui-unit));
         padding-bottom: calc(35 * var(--ui-unit));
@@ -118,4 +67,3 @@
         width: calc(var(--regular-item-width) * 0.4);
         margin: calc(20 * var(--ui-unit)) 0;
     }
-}

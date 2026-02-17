@@ -1,44 +1,34 @@
-/* Desktop : Landscape */
-@media (min-width: 1600px) and (orientation: landscape) {
-    .mainContainer {
-        --menu-width: 30vw;
-        width: var(--menu-width);
-        background-color: var(--medium-grey3);
-        position: absolute;
-        overflow-y: scroll;
-        z-index: 1;
-    }
+ .visible {
+     left: 0;
+     transition: left 0.5s;
+ }
 
-    .visible {
-        left: 0;
-        transition: left 0.5s;
-    }
+ .hidden {
+     left: calc(var(--menu-width) * -1);
+     transition: left 0.5s;
+ }
 
-    .hidden {
-        left: calc(var(--menu-width) * -1);
-        transition: left 0.5s;
-    }
-}
 
-/* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
-    .mainContainer {
-        --menu-width: calc(330 * var(--ui-unit));
-        width: var(--menu-width);
-        background-color: var(--medium-grey3);
-        position: absolute;
-        left: 0;
-        overflow-y: scroll;
-        z-index: 1;
-    }
+ /* Landscape */
+ @media (orientation: landscape) {
+     .mainContainer {
+         --menu-width: calc(400 * var(--ui-unit));
+         width: var(--menu-width);
+         background-color: var(--medium-grey3);
+         position: absolute;
+         overflow-y: scroll;
+         z-index: 1;
+     }
+ }
 
-    .visible {
-        left: 0;
-        transition: left 0.5s;
-    }
-
-    .hidden {
-        left: calc(var(--menu-width) * -1);
-        transition: left 0.5s;
-    }
-}
+ /* Portrait */
+ @media (orientation : portrait) {
+     .mainContainer {
+         --menu-width: calc(330 * var(--ui-unit));
+         width: var(--menu-width);
+         background-color: var(--medium-grey3);
+         position: absolute;
+         overflow-y: scroll;
+         z-index: 1;
+     }
+ }
