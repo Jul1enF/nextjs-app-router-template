@@ -1,5 +1,5 @@
 /* Desktop : Landscape */
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
     .mainContainer {
         --menu-width: 30vw;
         width: var(--menu-width);
@@ -21,9 +21,9 @@
 }
 
 /* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
+@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
     .mainContainer {
-        --menu-width: calc(330 * var(--scaled-px));
+        --menu-width: calc(330 * var(--ui-unit));
         width: var(--menu-width);
         background-color: var(--medium-grey3);
         position: absolute;

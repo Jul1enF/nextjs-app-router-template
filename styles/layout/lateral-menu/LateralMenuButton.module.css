@@ -1,5 +1,5 @@
 /* Desktop : Landscape */
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
     .menuButton {
         width: 8vw;
         height: 3vw;
@@ -22,10 +22,10 @@
 }
 
 /* Phones / Tablets / Small Screens in landscape */
-@media (max-width: 1350px) and (orientation: landscape) {
+@media (max-width: 1600px) and (orientation: landscape) {
     .menuButton {
-        width: calc(105 * var(--scaled-px));
-        height: calc(38 * var(--scaled-px));
+        width: calc(105 * var(--ui-unit));
+        height: calc(38 * var(--ui-unit));
         background-color: var(--medium-grey3);
         border: transparent;
         position: absolute;
@@ -39,8 +39,8 @@
 
     .menuIcon {
         color: var(--dark-white);
-        height: calc(26 * var(--scaled-px));
-        width: calc(26 * var(--scaled-px));
+        height: calc(26 * var(--ui-unit));
+        width: calc(26 * var(--ui-unit));
     }
 }
 
@@ -50,10 +50,10 @@
 
     .menuIcon {
         color: var(--dark-white);
-        height: calc(32 * var(--scaled-px));
-        width: calc(32 * var(--scaled-px));
+        height: calc(32 * var(--ui-unit));
+        width: calc(32 * var(--ui-unit));
         position: absolute;
-        left: calc(25 * var(--scaled-px));
-        margin-top: calc(3 * var(--scaled-px));
+        left: calc(25 * var(--ui-unit));
+        margin-top: calc(3 * var(--ui-unit));
     }
 }

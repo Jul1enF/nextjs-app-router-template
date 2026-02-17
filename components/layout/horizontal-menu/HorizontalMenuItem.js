@@ -20,7 +20,7 @@ export default function HorizontalMenuItem({ sectionName, link, func, selectedSe
     return (
         <button
             type="button"
-            className={`regularText ${styles.linkItem} ${selectedSection?.sectionName !== sectionName && styles.unselectedLinkItem}`}
+            className={`regularText regularTextPx ${styles.linkItem} ${selectedSection?.sectionName !== sectionName && styles.unselectedLinkItem}`}
             onClick={sectionClick}
             ref={ref => sectionsRef.current[sectionName] = ref}
         >

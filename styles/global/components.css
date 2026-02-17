@@ -141,49 +141,51 @@
 
 
 
-/* ============================================================
-   RESPONSIVE VARIABLES AND CLASSES - DESKTOP LANDSCAPE
-   ============================================================ */
-
-@media (min-width: 1350px) and (orientation: landscape) {
+/* ===============================================
+   RESPONSIVE VARIABLES AND CLASSES - ALL SCREENS
+   =============================================== */
 
     /* Main sizes of the components */
     :root {
-        --header-height: 6.5vw;
-        --horiz-menu-height: 3vw;
+        --header-height: calc(80 * var(--ui-unit));
+        --tab-bar-height: calc(86 * var(--ui-unit));
+        --horiz-menu-height: calc(45 * var(--ui-unit));
 
-        --page-padding-bottom: 4vw;
-
-        --regular-border-radius: 0.8vw;
-        --regular-horizontal-padding: 1vw;
-        --regular-vertical-padding : 0.65vw;
-        --regular-item-width: 25vw;
-        --regular-item-height: 3vw;
-
-        --medium-vertical-padding : 0.80vw;
-        --medium-item-width: 31vw;
-        --medium-item-height: 3.3vw;
-
-        --large-vertical-padding : 0.95vw;
-        --large-item-width: 35vw;
-        --large-item-height: 3.6vw;
+        --regular-border-radius: calc(10 * var(--ui-unit));
+        --regular-horizontal-padding: calc(10 * var(--ui-unit));
+        --regular-vertical-padding : calc(8 * var(--ui-unit));
+        --regular-item-width: calc(280 * var(--ui-unit));
+        --regular-item-height: calc(40 * var(--ui-unit));
 
 
-        --regular-margin-top: 1.2vw;
-        --medium-margin-top: 2vw;
+        --medium-vertical-padding : calc(11 * var(--ui-unit));
+        --medium-item-width: calc(340 * var(--ui-unit));
+        --medium-item-height: calc(45 * var(--ui-unit));
+
+
+        --large-vertical-padding : calc(13.5 * var(--ui-unit));
+        --large-item-width: calc(380 * var(--ui-unit));
+        --large-item-height: calc(50 * var(--ui-unit));
+
+
+        --regular-margin-top: calc(15 * var(--ui-unit));
+        --medium-margin-top: calc(25 * var(--ui-unit));
+
         /* page padding top : */
-        --large-margin-top: 2.5vw;
-        --very-large-margin-top: 3.8vw;
+        --large-margin-top: calc(30 * var(--ui-unit));
 
-        --card-horizontal-padding: 2vw;
-        --card-padding: 3vw var(--card-horizontal-padding);
+        --very-large-margin-top: calc(45 * var(--ui-unit));
 
-        --large-card-width: 40vw;
-        --large-card-padding : 3vw var(--card-horizontal-padding) 4vw;
+
+        --card-horizontal-padding: calc(20 * var(--ui-unit));
+        --card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(35 * var(--ui-unit));
+
+        --large-card-width: var(--large-item-width);
+        --large-card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(45 * var(--ui-unit));
     }
 
-
     /* Components classes */
+
     .pageViewport {
         max-height: 100dvh;
         overflow-y: auto;
@@ -195,69 +197,8 @@
 
     .smallIcon {
         color: var(--light-grey);
-        width: 1.6vw;
-        height: 1.6vw;
-    }
-
-    .line {
-        background-color: var(--bright-grey);
-        min-height: 0.1vw;
-    }
-
-}
-
-
-/* ===============================================================================
-   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS / SMALL SCREENS / PORTRAIT
-   =============================================================================== */
-
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
-
-    /* Main sizes of the components */
-    :root {
-        --header-height: calc(80 * var(--scaled-px));
-        --tab-bar-height: calc(86 * var(--scaled-px));
-
-        --page-padding-bottom: calc(var(--tab-bar-height) + calc(50 * var(--scaled-px)));
-
-        --regular-border-radius: calc(10 * var(--scaled-px));
-        --regular-horizontal-padding: calc(10 * var(--scaled-px));
-        --regular-vertical-padding : calc(8 * var(--scaled-px));
-        --regular-item-width: calc(280 * var(--scaled-px));
-        --regular-item-height: calc(40 * var(--scaled-px));
-
-
-        --medium-vertical-padding : calc(11 * var(--scaled-px));
-        --medium-item-width: calc(340 * var(--scaled-px));
-        --medium-item-height: calc(45 * var(--scaled-px));
-
-
-        --large-vertical-padding : calc(13.5 * var(--scaled-px));
-        --large-item-width: calc(380 * var(--scaled-px));
-        --large-item-height: calc(50 * var(--scaled-px));
-
-
-        --regular-margin-top: calc(15 * var(--scaled-px));
-        --medium-margin-top: calc(25 * var(--scaled-px));
-        /* page padding top : */
-        --large-margin-top: calc(30 * var(--scaled-px));
-        --very-large-margin-top: calc(45 * var(--scaled-px));
-
-
-        --card-horizontal-padding: calc(20 * var(--scaled-px));
-        --card-padding: calc(30 * var(--scaled-px)) var(--card-horizontal-padding) calc(35 * var(--scaled-px));
-
-        --large-card-width: var(--large-item-width);
-        --large-card-padding: calc(30 * var(--scaled-px)) var(--card-horizontal-padding) calc(45 * var(--scaled-px));
-    }
-
-    /* Components classes */
-
-
-    .smallIcon {
-        color: var(--light-grey);
-        width: calc(20 * var(--scaled-px));
-        height: calc(20 * var(--scaled-px));
+        width: calc(20 * var(--ui-unit));
+        height: calc(20 * var(--ui-unit));
     }
 
     .line {
@@ -265,17 +206,30 @@
         min-height: 1px
     }
 
+
+/* ==============================================
+   RESPONSIVE VARIABLES AND CLASSES : LANDSCAPE
+   ============================================== */
+
+@media (orientation: landscape) {
+    :root {
+        --page-padding-bottom: calc(50 * var(--ui-unit));
+
+        /* OVERRIDE */
+        --large-card-width: calc(525 * var(--ui-unit));
+    }
 }
 
 
-/* =========================================================================================
-   RESPONSIVE VARIABLES AND CLASSES - PHONES / TABLETS / SMALL SCREENS : LANDSCAPE OVERRIDE
-   ========================================================================================= */
+/* ==============================================
+   RESPONSIVE VARIABLES AND CLASSES : PORTRAIT
+   ============================================== */
 
-@media (max-width: 1350px) and (orientation: landscape) {
+@media (orientation: portrait) {
     :root {
-        --horiz-menu-height: calc(45 * var(--scaled-px));
-        /* Large card width override */
-        --large-card-width: calc(525 * var(--scaled-px));
+        --page-padding-bottom: calc(var(--tab-bar-height) + calc(50 * var(--ui-unit)));
+
+        /* OVERRIDE */
+        --large-card-width: calc(525 * var(--ui-unit));
     }
 }

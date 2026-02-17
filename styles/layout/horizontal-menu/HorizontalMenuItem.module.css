@@ -1,5 +1,5 @@
 /* Desktop : Landscapes */
-@media (min-width: 1350px) and (orientation: landscape)  {
+@media (min-width: 1600px) and (orientation: landscape)  {
 
     .linkItem {
         background-color: transparent;
@@ -16,7 +16,7 @@
 }
 
 /* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
+@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
 
     .linkItem {
         background-color: transparent;

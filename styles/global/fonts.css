@@ -6,7 +6,7 @@
       color: var(--light-green)
   }
 
-  /* Main fonts settings of the app */
+  /* MAIN FONTS SETTING OF THE APP */
 
   :root {
       --regular-font-size: 1.125rem;
@@ -20,20 +20,12 @@
       font-weight: 500;
   }
 
-  .pageTitlePx {
-      font-size: calc(30 * var(--scaled-px));
-  }
-
   .pageSubtitle {
       color: var(--dark-white);
       margin: 0;
       font-size: 1.45rem;
       letter-spacing: 0.07em;
       font-weight: 400;
-  }
-
-  .pageSubtitlePx {
-      font-size: calc(22 * var(--scaled-px));
   }
 
   .labelText {
@@ -44,20 +36,12 @@
       margin: 0;
   }
 
-  .labelTextPx {
-      font-size: calc(19.5 * var(--scaled-px));
-  }
-
   .largeText {
       color: var(--dark-white);
       font-size: 1.22rem;
       font-weight: 400;
       letter-spacing: 0.07em;
       margin: 0;
-  }
-
-  .largeTextPx {
-      font-size: calc(19 * var(--scaled-px));
   }
 
   .regularText {
@@ -69,10 +53,6 @@
       line-height: 1.3em;
   }
 
-  .regularTextPx {
-      font-size: calc(18 * var(--scaled-px));
-  }
-
   .smallText {
       color: var(--dark-white);
       font-size: 1rem;
@@ -81,14 +61,40 @@
       line-height: 1em;
   }
 
-  .smallTextPx {
-      font-size: calc(16 * var(--scaled-px));
-  }
-
   .warning {
       font-weight: 500;
       width: 100%;
       font-size: var(--regular-font-size);
       margin: var(--regular-margin-top) 0 0 0;
       line-height: 1.05em;
+  }
+
+
+  /* EXCEPT FOR VERY LARGE SCREENS, FIXED FONT SIZES IN UI UNIT INSTEAD OF REM */
+
+  @media (max-width: 1400px) {
+
+      .pageTitlePx {
+          font-size: calc(30 * var(--ui-unit));
+      }
+
+      .pageSubtitlePx {
+          font-size: calc(22 * var(--ui-unit));
+      }
+
+      .labelTextPx {
+          font-size: calc(19.5 * var(--ui-unit));
+      }
+
+      .largeTextPx {
+          font-size: calc(19 * var(--ui-unit));
+      }
+
+      .regularTextPx {
+          font-size: calc(18 * var(--ui-unit));
+      }
+
+      .smallTextPx {
+          font-size: calc(16 * var(--ui-unit));
+      }
   }

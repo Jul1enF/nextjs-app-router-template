@@ -1,5 +1,5 @@
 /* Desktop : Landscape */
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
 .mainContainer {
     min-height: var(--header-height);
     width: 100vw;
@@ -25,7 +25,7 @@
 }
 
 /* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
+@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
 .mainContainer {
     min-height: var(--header-height);
     background-color: var(--strong-black);
@@ -42,8 +42,8 @@
 .headerTitle {
     color: var(--dark-white);
     margin: 0;
-    font-size: calc(38 * var(--scaled-px));
-    letter-spacing: calc(2 * var(--scaled-px));
+    font-size: calc(38 * var(--ui-unit));
+    letter-spacing: calc(2 * var(--ui-unit));
     font-weight: 600;
     text-align: center;
     cursor: pointer;

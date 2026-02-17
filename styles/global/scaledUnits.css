@@ -1,8 +1,15 @@
 /* Desktop : Landscape */
 
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
+    /* VW UI UNIT = (PREVIOUS PX VALUE / MIN-WIDTH) * 100      =>  (1.05 / 1600) * 100    */
+    /* VW FONT SIZE = (PREVIOUS REM VALUE / MIN-WIDTH) * 100      =>  (16.8 / 1600) * 100    */
+
+    :root {
+        --ui-unit: 0.065625vw;
+    }
+    
     html {
-        font-size: clamp(16.8px, 1.06vw, 24px);
+        font-size: clamp(16.8px, 1.05vw, 24px);
     }
 }
 
@@ -11,9 +18,9 @@
 
 
 /* Tablets - Small Screens */
-@media (max-width: 1350px) and (min-width: 500px) and (min-height: 500px) {
+@media (max-width: 1600px) and (min-width: 500px) and (min-height: 500px) {
     :root {
-        --scaled-px: 1.05px;
+        --ui-unit: 1.05px;
     }
 
      html {
@@ -24,7 +31,7 @@
 /* Regular phones - Portait */
 @media (max-width: 500px) and (min-width: 395px) and (orientation: portrait) {
     :root {
-        --scaled-px: 1px;
+        --ui-unit: 1px;
     }
 
      html {
@@ -33,9 +40,9 @@
 }
 
 /* Small phones - Portrait */
-@media (max-width: 394px) and (orientation: portrait) {
+@media (max-width: 395px) and (orientation: portrait) {
     :root {
-        --scaled-px: 0.85px;
+        --ui-unit: 0.85px;
     }
 
      html {
@@ -46,7 +53,7 @@
 /* Phones in landscape */
 @media (max-height: 500px) and (orientation: landscape) {
     :root {
-        --scaled-px: 0.95px;
+        --ui-unit: 0.95px;
     }
 
      html {

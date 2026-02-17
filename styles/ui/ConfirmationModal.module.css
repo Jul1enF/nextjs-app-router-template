@@ -32,7 +32,7 @@
 
 
 /* Desktop : Landscape */
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
 
     .visibleModal {
         position: absolute;
@@ -78,12 +78,12 @@
 
 
 /* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
+@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
 
     .visibleModal {
         position: absolute;
-        padding-top: calc(35 * var(--scaled-px));
-        padding-bottom: calc(35 * var(--scaled-px));
+        padding-top: calc(35 * var(--ui-unit));
+        padding-bottom: calc(35 * var(--ui-unit));
         bottom: 20lvh;
         width: var(--regular-card-width);
         visibility: visible;
@@ -95,8 +95,8 @@
     .hiddenModal {
         position: absolute;
         visibility: hidden;
-        padding-top: calc(35 * var(--scaled-px));
-        padding-bottom: calc(35 * var(--scaled-px));
+        padding-top: calc(35 * var(--ui-unit));
+        padding-bottom: calc(35 * var(--ui-unit));
         bottom: -50lvh;
         width: var(--regular-card-width);
         transition: bottom 0.3s,
@@ -110,12 +110,12 @@
         color: var(--bright-grey);
         text-align: center;
         margin: 0;
-        font-size: calc(20 * var(--scaled-px));
+        font-size: calc(20 * var(--ui-unit));
     }
 
 
     .thisLine {
         width: calc(var(--regular-item-width) * 0.4);
-        margin: calc(20 * var(--scaled-px)) 0;
+        margin: calc(20 * var(--ui-unit)) 0;
     }
 }

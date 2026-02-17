@@ -1,5 +1,5 @@
 /* Desktop : Landscape */
-@media (min-width: 1350px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
     .mainContainer {
         width: 100vw;
         height: var(--horiz-menu-height);
@@ -24,7 +24,7 @@
 }
 
 /* Portrait + Phones - Tablets - Small Screens : Landscape */
-@media (max-width: 1350px) and (orientation: landscape), (orientation : portrait) {
+@media (max-width: 1600px) and (orientation: landscape), (orientation : portrait) {
     .mainContainer {
         display: flex;
         align-items: center;
@@ -35,15 +35,15 @@
         position: fixed;
         top: var(--header-height);
         overflow-x: scroll;
-        column-gap: calc(15 * var(--scaled-px));
-        padding: 0 calc(10 * var(--scaled-px));
+        column-gap: calc(15 * var(--ui-unit));
+        padding: 0 calc(10 * var(--ui-unit));
         scrollbar-width: none;
         z-index: 8;
     }
 
     .underline {
         background-color: var(--strong-red);
-        min-height: calc(6 * var(--scaled-px));
+        min-height: calc(6 * var(--ui-unit));
         position: absolute;
         bottom: 0;
         transition: left 0.4s,
