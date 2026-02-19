@@ -72,7 +72,7 @@
 
   /* EXCEPT FOR VERY LARGE SCREENS, FIXED FONT SIZES IN UI UNIT INSTEAD OF REM */
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1600px) {
 
       .pageTitlePx {
           font-size: calc(30 * var(--ui-unit));

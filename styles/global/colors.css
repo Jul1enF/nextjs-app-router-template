@@ -1,10 +1,12 @@
 /* Custom input color */
 input::placeholder {
-    color: rgba(255, 255, 255, 0.31);
+    color: var(--placeholder-color);
 }
 
 /* Main colors of the app */
 :root {
+    --placeholder-color : rgba(255, 255, 255, 0.31);
+
     --bright-white: rgba(250, 248, 252, 1);
 
     --dark-white: rgba(246, 241, 254, 1);

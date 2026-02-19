@@ -44,7 +44,7 @@
 
 .largeItem {
     width: var(--large-item-width);
-    max-width: 100%;
+    /* max-width: 100%; */
     min-height: var(--large-item-height);
     border-radius: var(--regular-border-radius);
     padding: var(--large-vertical-padding) var(--regular-horizontal-padding);
