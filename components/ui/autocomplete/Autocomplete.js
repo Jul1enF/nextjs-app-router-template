@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "@/styles/ui/autocomplete/Autocomplete.module.css";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { IoChevronDown } from "react-icons/io5";
