@@ -4,6 +4,9 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        max-width: 20%;
+        max-height: 100%;
+        overflow: hidden;
         -webkit-tap-highlight-color: transparent;
     }
 

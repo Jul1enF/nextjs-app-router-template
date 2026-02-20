@@ -14,6 +14,7 @@
      .mainContainer {
          --menu-width: calc(400 * var(--ui-unit));
          width: var(--menu-width);
+         max-width: 100%;
          background-color: var(--medium-grey3);
          position: absolute;
          overflow-y: scroll;
@@ -26,6 +27,7 @@
      .mainContainer {
          --menu-width: calc(330 * var(--ui-unit));
          width: var(--menu-width);
+         max-width: 100%;
          background-color: var(--medium-grey3);
          position: absolute;
          overflow-y: scroll;

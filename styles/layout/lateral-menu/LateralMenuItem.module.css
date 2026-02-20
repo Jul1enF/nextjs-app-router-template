@@ -1,6 +1,7 @@
 
   .mainContainer {
     width: 100%;
+    max-width: 100%;
     height: calc(90 * var(--ui-unit));
     border: none;
     border-bottom: 1px solid var(--light-grey);

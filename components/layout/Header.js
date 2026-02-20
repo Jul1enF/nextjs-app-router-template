@@ -15,7 +15,7 @@ export default function Header() {
                 toggleVisibility={() => setMenuVisible(!menuVisible)}
             />
 
-            <Link href={'/'} style={{ textDecoration: "none" }}>
+            <Link href={'/'} style={{ textDecoration: "none"}} className={styles.headerTitleContainer}>
                 <h1 className={styles.headerTitle}>
                     App Name
                 </h1>

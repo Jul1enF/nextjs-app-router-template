@@ -44,7 +44,7 @@
 
 .largeItem {
     width: var(--large-item-width);
-    /* max-width: 100%; */
+    max-width: 100%;
     min-height: var(--large-item-height);
     border-radius: var(--regular-border-radius);
     padding: var(--large-vertical-padding) var(--regular-horizontal-padding);
@@ -145,66 +145,61 @@
    RESPONSIVE VARIABLES AND CLASSES - ALL SCREENS
    =============================================== */
 
-    /* Main sizes of the components */
-    :root {
-        --header-height: calc(80 * var(--ui-unit));
-        --tab-bar-height: calc(86 * var(--ui-unit));
-        --horiz-menu-height: calc(45 * var(--ui-unit));
+/* Main sizes of the components */
+:root {
+    --header-height: min(calc(80 * var(--ui-unit)), 20dvh);
+    --tab-bar-height: min(calc(86 * var(--ui-unit)), 20lvh);
+    --horiz-menu-height: calc(45 * var(--ui-unit));
 
-        --regular-border-radius: calc(10 * var(--ui-unit));
-        --regular-horizontal-padding: calc(10 * var(--ui-unit));
-        --regular-vertical-padding : calc(8 * var(--ui-unit));
-        --regular-item-width: calc(280 * var(--ui-unit));
-        --regular-item-height: calc(40 * var(--ui-unit));
-
-
-        --medium-vertical-padding : calc(11 * var(--ui-unit));
-        --medium-item-width: calc(340 * var(--ui-unit));
-        --medium-item-height: calc(45 * var(--ui-unit));
+    --regular-border-radius: calc(10 * var(--ui-unit));
+    --regular-horizontal-padding: calc(10 * var(--ui-unit));
+    --regular-vertical-padding: calc(8 * var(--ui-unit));
+    --regular-item-width: calc(280 * var(--ui-unit));
+    --regular-item-height: calc(40 * var(--ui-unit));
 
 
-        --large-vertical-padding : calc(13.5 * var(--ui-unit));
-        --large-item-width: calc(380 * var(--ui-unit));
-        --large-item-height: calc(50 * var(--ui-unit));
+    --medium-vertical-padding: calc(11 * var(--ui-unit));
+    --medium-item-width: calc(340 * var(--ui-unit));
+    --medium-item-height: calc(45 * var(--ui-unit));
 
 
-        --regular-margin-top: calc(15 * var(--ui-unit));
-        --medium-margin-top: calc(25 * var(--ui-unit));
-
-        /* page padding top : */
-        --large-margin-top: calc(30 * var(--ui-unit));
-
-        --very-large-margin-top: calc(45 * var(--ui-unit));
+    --large-vertical-padding: calc(13.5 * var(--ui-unit));
+    --large-item-width: calc(380 * var(--ui-unit));
+    --large-item-height: calc(50 * var(--ui-unit));
 
 
-        --card-horizontal-padding: calc(20 * var(--ui-unit));
-        --card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(35 * var(--ui-unit));
+    --regular-margin-top: calc(15 * var(--ui-unit));
+    --medium-margin-top: calc(25 * var(--ui-unit));
 
-        --large-card-width: var(--large-item-width);
-        --large-card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(45 * var(--ui-unit));
-    }
+    /* page padding top : */
+    --large-margin-top: calc(30 * var(--ui-unit));
 
-    /* Components classes */
+    --very-large-margin-top: calc(45 * var(--ui-unit));
 
-    .pageViewport {
-        max-height: 100dvh;
-        overflow-y: auto;
-    }
 
-    .desktopLargeItemWidth {
-        width: var(--large-item-width);
-    }
+    --card-horizontal-padding: calc(20 * var(--ui-unit));
+    --card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(35 * var(--ui-unit));
 
-    .smallIcon {
-        color: var(--light-grey);
-        width: calc(20 * var(--ui-unit));
-        height: calc(20 * var(--ui-unit));
-    }
+    --large-card-width: var(--large-item-width);
+    --large-card-padding: calc(30 * var(--ui-unit)) var(--card-horizontal-padding) calc(45 * var(--ui-unit));
+}
 
-    .line {
-        background-color: var(--bright-grey);
-        min-height: 1px
-    }
+/* Components classes */
+
+.desktopLargeItemWidth {
+    width: var(--large-item-width);
+}
+
+.smallIcon {
+    color: var(--light-grey);
+    width: calc(20 * var(--ui-unit));
+    height: calc(20 * var(--ui-unit));
+}
+
+.line {
+    background-color: var(--bright-grey);
+    min-height: 1px
+}
 
 
 /* ==============================================
@@ -228,8 +223,5 @@
 @media (orientation: portrait) {
     :root {
         --page-padding-bottom: calc(var(--tab-bar-height) + calc(50 * var(--ui-unit)));
-
-        /* OVERRIDE */
-        --large-card-width: calc(525 * var(--ui-unit));
     }
 }

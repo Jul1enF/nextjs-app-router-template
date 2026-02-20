@@ -7,7 +7,6 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 export default function LateralMenuButton({ toggleVisibility }) {
   const { landscapeDisplay } = useWindowDimensions();
 
-  if (landscapeDisplay) {
     return (
       <button
         type="button"
@@ -16,16 +15,12 @@ export default function LateralMenuButton({ toggleVisibility }) {
         id="lateralMenuButtonId"
       >
         <IoMenu className={styles.menuIcon} />
-        <p className="largeText">Menu</p>
+
+        {landscapeDisplay ? 
+        <p className="largeText largeTextPx">Menu</p>
+        : null
+        }
+        
       </button>
-    );
-  } else {
-    return (
-      <IoMenu
-        className={styles.menuIcon}
-        onClick={toggleVisibility}
-        id="lateralMenuButtonId"
-      />
-    );
-  }
+    )
 }

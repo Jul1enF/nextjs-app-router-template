@@ -15,7 +15,7 @@ export default function Home() {
   const list = [{ frenchTitle: "Jaune", englishTitle: "Yellow" }, { frenchTitle: "Vert", englishTitle: "Green" }, { frenchTitle: "Rouge", englishTitle: "Red" }, { frenchTitle: "Rose", englishTitle: "Pink" }, { frenchTitle: "Violet", englishTitle: "Purple" }]
 
   return (
-    <div className="pageContent pageViewport">
+    <div className="pageContent">
       <h2 className="pageTitle">
         Welcome home !!!
       </h2>
@@ -24,12 +24,12 @@ export default function Home() {
         Hello !!!
       </h3>
 
-      <button className='regularItem strongRedBg regularText mt-large' onClick={() => setModalVisible(true)}>
+      <button type="button" className='regularItem strongRedBg regularText mt-large' onClick={() => setModalVisible(true)}>
         Confirmation
       </button>
 
       <button className='mediumItem strongRedBg regularText mt-medium' onClick={() => setModalVisible(true)}>
-        Confirmation - medium height
+        Confirmation - medium item
       </button>
 
       <button className='largeItem strongRedBg regularText mt-medium' onClick={() => setModalVisible(true)}>

@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     width: 100vw;
     height: var(--horiz-menu-height);
+    max-height: 20dvh;
     background-color: var(--dark-grey);
     position: fixed;
     top: var(--header-height);

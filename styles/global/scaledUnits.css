@@ -1,7 +1,7 @@
 /* Desktop : Landscape */
 
 @media (min-width: 1600px) and (orientation: landscape) {
-    /* VW UI UNIT = (PREVIOUS PX VALUE / MIN-WIDTH) * 100      =>  (1.05 / 1600) * 100    */
+    /* VW UI UNIT = (PREVIOUS UI-UNIT PX VALUE / MIN-WIDTH) * 100      =>  (1.05 / 1600) * 100    */
     /* VW FONT SIZE = (PREVIOUS REM VALUE / MIN-WIDTH) * 100      =>  (16.8 / 1600) * 100    */
 
     :root {
@@ -12,9 +12,6 @@
         font-size: clamp(16.8px, 1.05vw, 24px);
     }
 }
-
-
-/* Scaled pixel is used for screens too small to have fonts and measures in vw (13" laptops, tablets, phones) and when in portrait mode */
 
 
 /* Tablets - Small Screens */
@@ -46,7 +43,7 @@
     }
 
      html {
-        font-size: 90%;
+        font-size: 95%;
     }
 }
 
